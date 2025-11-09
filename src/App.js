@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-
+//Main function for component called App
 function App() {
+	// Creating lists of data for site
 	const Quotes = [
 		'Patience is a key element of success',
 		'If you think your teacher is tough, wait till you get boss',
@@ -15,12 +16,15 @@ function App() {
 		'https://www.gatesnotes.com/',
 		'https://twitter.com/billgates'
 	]
+	// Creating App component
 	return (
 		<div className="App">
+			{/*Creating card bootstrap to display data*/}
 			<div className={'card bg-light m-3'}>
 				<h1 className={'card-title'}>Quotes of Bill Gates</h1>
 				<div className={'card-body'}>
 					<div>
+						{/*Using botstrap grid*/}
 						<div className={'row'}>
 							<div className={'col-5'}>
 								<img className={'card-img'}
@@ -31,6 +35,7 @@ function App() {
 									philanthropist. A pioneer of the microcomputer revolution of the 1970s and 1980s, he
 									co-founded the software company Microsoft in 1975 with his childhood friend Paul
 									Allen.</p>
+								{/*Mapping through list of quotes to make code shorter*/}
 								{Quotes.map(q =>
 									<div className={'card m-2 mt-0'}>
 										<h4 className={'h5'}>{q}</h4>
@@ -42,6 +47,7 @@ function App() {
 					<div>
 						<h2>Useful Links</h2>
 						<div className={'row'}>
+							{/*Mapping through list of links to shorten the code*/}
 							{Links.map(l => <a href={l}>{l}</a>)}
 						</div>
 					</div>
